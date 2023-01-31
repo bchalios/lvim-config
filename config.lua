@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "lunar"
+lvim.colorscheme = "gruvbox"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -177,12 +177,13 @@ lvim.plugins = {
   },
   { "hrsh7th/cmp-nvim-lua" },
   { "hrsh7th/cmp-nvim-lsp-signature-help" },
-  { "hrsh7th/cmp-vsnip"},
+  { "hrsh7th/cmp-vsnip" },
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
-    config = function() require"lsp_signature".on_attach() end,
+    config = function() require "lsp_signature".on_attach() end,
   },
+  { "ellisonleao/gruvbox.nvim" }
 }
 
 local status_ok, rust_tools = pcall(require, "rust-tools")
@@ -207,14 +208,14 @@ local opts = {
     },
     hover_actions = {
       border = {
-             { "╭", "FloatBorder" },
-             { "─", "FloatBorder" },
-             { "╮", "FloatBorder" },
-             { "│", "FloatBorder" },
-             { "╯", "FloatBorder" },
-             { "─", "FloatBorder" },
-             { "╰", "FloatBorder" },
-             { "│", "FloatBorder" },
+        { "╭", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "╮", "FloatBorder" },
+        { "│", "FloatBorder" },
+        { "╯", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "╰", "FloatBorder" },
+        { "│", "FloatBorder" },
       },
       auto_focus = true,
     },
@@ -226,7 +227,7 @@ local opts = {
       ["rust-analyzer"] = {
         checkOnSave = {
           command = "clippy",
-          extraArgs = {"--target-dir", "/tmp/rust-analyzer-check" },
+          extraArgs = { "--target-dir", "/tmp/rust-analyzer-check" },
         }
       }
     },
