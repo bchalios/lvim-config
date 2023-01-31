@@ -15,6 +15,9 @@ lvim.colorscheme = "gruvbox"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
+-- use relative line numbers
+vim.opt.relativenumber = true
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
